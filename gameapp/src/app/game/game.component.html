@@ -1,0 +1,16 @@
+<!-- Q.1) Write an AngularJS script to display list of games stored in an array on click of
+button using ng-click and also demonstrate ng-init, ng-bind directive of AngularJS. -->
+
+<div style="max-width:500px;margin:auto;font-family:Arial;">
+
+  <!-- ng-bind equivalent -->
+  <h3>{{ title }}</h3>
+
+  <!-- ng-click equivalent -->
+  <button (click)="displayGames()">Show Games</button>
+
+  <ul *ngIf="showList">
+    <li *ngFor="let g of games">{{ g }}</li>
+  </ul>
+
+</div>
